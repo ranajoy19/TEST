@@ -1,0 +1,207 @@
+# find odd or even number without using for loop and if 
+
+# list1  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+# even_number = list (filter(lambda x: x % 2 == 0 ,list1))
+# print(even_number)
+# odd_number = list(filter(lambda x : x % 2 !=0,list1))
+# print(odd_number)
+
+# Listing Duplicates in a List & Listing Unique Values
+
+# list1 = [5, 3, 5, 2, 1, 6, 6, 4]
+
+# unique = []
+# dublicate = []
+# for i in list1:
+#     if i not in unique:
+#         unique.append(i)
+#     else:
+#         dublicate.append(i)
+# unique.extend(dublicate)
+# print(unique)
+
+
+
+
+#1 revesed the word using python 
+
+# word = "my name is ranajoy"
+
+# revesed = " ".join(word.split()[::-1])
+
+# print(revesed)
+
+
+
+#2 generate an infinte fibonaaci series uing generator
+
+# normal fibonaaci series using recersion and for loop
+
+
+# METHOD =1
+'''def fibo(n):
+    if n == 0:
+        return 0
+
+    elif n==1 or n==2:
+        return 1
+
+    else:
+        return fibo(n-1)+ fibo(n-2)
+
+for i in range(1,10):
+    print( "index of {} :{}".format(i,fibo(i)))
+'''
+
+# METHOD =2
+'''
+def fibo(n):
+    a=0
+    b=1
+    
+    if n ==1 or n ==2:
+        return 1
+    elif n ==0:
+        return 0
+    else:
+        for i in range(1,n):
+            c = a+b
+            a = b
+            b = c
+        return b        
+
+for i in range(12):
+    print( "index of {} :{}".format(i,fibo(i)))
+'''
+
+# Method = using Generator
+
+# def fibo():
+#     a=0
+#     b=1
+#     while True:
+#         yield a
+#         a,b = b, a+b 
+
+# f1 = fibo()
+
+# print(next(f1))
+# print(next(f1))
+# print(next(f1))
+# print(next(f1))
+
+
+#3 Palindrome string 
+
+# string Method - 1
+
+# def palindrome(n):
+
+#     rev = n[::-1]
+
+#     if n == rev:
+#         print(n,"is a palindrome string")
+#     else:
+#         print(n,"is not a palindrome string")    
+
+
+# palindrome("baab")
+
+
+# string method 2 
+
+# def palindrome(n):
+
+#     rev = ""
+#     for i in range(len(n)-1,-1,-1):
+#         rev = rev + n[i]
+#     if n == rev:
+#         print(n,"is a palindrome string")
+#     else:
+#         print(n,"is not a palindrome string")      
+
+# palindrome("baab")
+
+#  Palindrome Number
+
+# def palindrome(n):
+#     org = n
+#     rev =0
+#     while n>0:
+#         rev = (10*rev) + (n%10)
+#         n = n//10
+#     if rev == org:
+#         print(org,"is a palindrome number")
+#     else:
+#         print(org,"is not a palindrome number") 
+# palindrome(323)
+
+# string = 'abcded'
+# list1 = [1,1,2,3,5,8]
+
+# sum = sum(list1)
+# string1 = str(sum)
+# for i in range(len(string)):
+#     string1 = string1+str(string[i])+str(list1[i])
+# print(string1)    
+
+# 2) find the sum of each string and find the biggest sum from the list
+# A=[222,121,145,611] find the largest sum if entire number ,
+# like 2+2+2=6 ,1+2+1= 4
+
+# arr =[124,341,126,632]
+# new_arr=[]
+# for i in arr:
+#     string = list(map(int,str(i)))
+#     add = sum(string)
+#     new_arr.append(add)
+# print(max(new_arr),new_arr)    
+
+#sort without using sort Keyword 
+# list = [-5, -23, 5, 0, 23, -6, 23, 67]
+
+# for i in range(len(list)):
+#     for j in range(i+1,len(list)):
+#         if list[i]>=list[j]:
+#             list[i],list[j]=list[j],list[i]
+# print(list)
+
+
+# print all the pairs with given sum
+
+# list=[8,7,2,5,3,1]
+# sum = 10
+# method 1
+# for i in range(len(list)):
+#     for j in range(i+1,len(list)):
+#         if (list[i]+list[j]) == sum:
+#             print(list[i],list[j])
+
+# Method 2
+# new_list=[]
+# for i in list:
+#     left = sum-i
+#     if left in new_list:
+#         print(i,left)
+#     else:
+#         new_list.append(i)
+        
+# armstronge Number 
+# loggic = 153 = 1^3+5^3+3^3 = 1 + 125+ 27 =153
+# 0 + 27 = 27 + 125
+# def arm(n):
+#     org= n
+#     sum=0
+#     while n >0:
+#         sum = sum + (n%10) *(n%10) *(n%10) 
+#         n = n //10
+#     print(sum)    
+#     if org == sum:
+#         print(f"{org} is a armstrong number")
+#     else:
+#         print(f"{org} is not a armstrong number" )
+
+# arm(153)
+
+
