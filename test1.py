@@ -164,11 +164,18 @@
 #             print(num)
 
 
-from datetime import date
-try:
-    date = date(2023, 1, 32)
-# d = datetime.datetime.strptime("1997-09-18", "%Y-%m-%d")
-# s = d.strftime('%Y')
-    print(date)
-except BaseException as err:
-    print(err)
+# from datetime import date,datetime
+# try:
+#     today =datetime.today()
+#     rule_date = date.today()
+#     # date = date(2023, 1, 32)
+#     # rule_year_start_date = datetime.strptime(str(rule_date), "%Y-%m-%d")
+#     # today_date = datetime.strptime(today, "%Y-%m-%d")
+#     year = rule_date.strftime("%Y")
+#     month =today.strftime("%m")
+#     day = today.strftime("%d")
+#     final_date = datetime(int(year),int(month),int(day))
+#     print(final_date,today)
+
+# except BaseException as err:
+#     print(err)

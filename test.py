@@ -63,17 +63,17 @@ for n in range(1,11):
 
 # Find Out Pairs with given sum in an array in python of time complexity O(n log n)
 #
-# arr=[5,7,4,3,9,8,19,21]
-# sum=17
-#
-# l=[]
-#
-# for i in range(len(arr)):
-#     left=sum-arr[i]
-#     if left in l:
-#         print(arr[i],left,)
-#     l.append(arr[i]) #[5,7,4,3,9,8]
-#     print(l)
+arr=[8,7,2,5,3,1]
+sum=10
+
+l=[]
+
+for i in range(len(arr)):
+    left=sum-arr[i]
+    if left in l:
+        print(arr[i],left)
+    l.append(arr[i]) #[5,7,4,3,9,8]
+    # print(l)
 #
 # Find minimum difference between two elements of Binary Tree
 
@@ -234,10 +234,10 @@ for n in range(1,11):
 
 
 
-from datetime import date
+# from datetime import date
 
-from datetime import timedelta
-Begindatestring = date.today()
-print(Begindatestring)
-real = Begindatestring+ timedelta(days=365)
-print(real)
+# from datetime import timedelta
+# Begindatestring = date.today()
+# print(Begindatestring)
+# real = Begindatestring+ timedelta(days=365)
+# print(real)

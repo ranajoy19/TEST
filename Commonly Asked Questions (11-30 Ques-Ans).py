@@ -81,10 +81,10 @@
 
 
 
-#
+
 # def display(**kwargs):
 #     return kwargs
-#
+
 # result= display(a=2,b=5,c=10)
 # print(result)
 
@@ -171,4 +171,77 @@
 
 
 
+# api Factor and Standards
 
+
+# 1) api contract ==> information given by the developer , what endpoint , methods , data o send , formating 
+# 2) Documentation => if its public api 
+# 3) formating 
+# 4) security => ratelimiting and Throttling  
+
+# Standards 
+
+# 1)  RPC 
+# 2)  SOAP
+# 3)  REST
+
+# session and cookies 
+
+# session is server side and cookies client side
+
+# how to flush the memory on python
+
+# using del and gc.collect()
+
+# from abc import ABC,abstractclassmethod
+# # class method and static method 
+ 
+# class vehical(ABC):
+    
+#     @abstractclassmethod
+#     def run(self):
+#         pass
+
+
+
+    # price =14
+    
+    # def __init__(self,color,brand) -> None:
+    #     self.color =color
+    #     self.brand =brand
+
+    # def get_info(self):
+    #     print(f"{self.brand} and {self.color}:{self.price}")
+
+
+    # @classmethod
+    # def set_price(cls,price):
+    #     cls.price = price
+
+
+    # @staticmethod
+    # def check_age(age):
+    #     if age >18:
+    #         print("you are an adult")
+    #     else:
+    #         print("you are a teenager")    
+# class car(vehical):
+    
+#     def run(self):
+#         print("car class")
+
+# class bike(vehical):
+#     pass 
+
+
+# # vehical.set_price(100)
+
+# v1 =car()
+# v1.run()
+
+
+# v.get_info()
+# v1.get_info()
+
+
+# vehical.check_age(1)
