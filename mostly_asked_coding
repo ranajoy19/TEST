@@ -1,7 +1,7 @@
-# find odd or even number without using for loop and if 
+# find odd or even number without using for loop and if
 
 # list1  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
- 
+
 # even_number = list (filter(lambda x: x % 2 == 0 ,list1))
 # print(even_number)
 # odd_number = list(filter(lambda x : x % 2 !=0,list1))
@@ -22,9 +22,7 @@
 # print(unique)
 
 
-
-
-#1 revesed the word using python 
+# 1 revesed the word using python
 
 # word = "my name is ranajoy"
 
@@ -33,15 +31,14 @@
 # print(revesed)
 
 
-
-#2 generate an infinte fibonaaci series uing generator
+# 2 generate an infinte fibonaaci series uing generator
 
 # normal fibonaaci series using recersion and for loop
 
 
 # METHOD =1
 # sourcery skip: avoid-builtin-shadow
-'''def fibo(n):
+"""def fibo(n):
     if n == 0:
         return 0
 
@@ -53,11 +50,11 @@
 
 for i in range(1,10):
     print( "index of {} :{}".format(i,fibo(i)))
-'''
+"""
 
 
 # METHOD =2
-'''
+"""
 def fibo(n):
     a=0
     b=1
@@ -75,7 +72,7 @@ def fibo(n):
 
 for i in range(12):
     print( "index of {} :{}".format(i,fibo(i)))
-'''
+"""
 
 # Method = using Generator
 
@@ -84,7 +81,7 @@ for i in range(12):
 #     b=1
 #     while True:
 #         yield a
-#         a,b = b, a+b 
+#         a,b = b, a+b
 
 # f1 = fibo()
 
@@ -94,7 +91,7 @@ for i in range(12):
 # print(next(f1))
 
 
-#3 Palindrome string 
+# 3 Palindrome string
 
 # string Method - 1
 
@@ -105,13 +102,13 @@ for i in range(12):
 #     if n == rev:
 #         print(n,"is a palindrome string")
 #     else:
-#         print(n,"is not a palindrome string")    
+#         print(n,"is not a palindrome string")
 
 
 # palindrome("baab")
 
 
-# string method 2 
+# string method 2
 
 # def palindrome(n):
 
@@ -121,7 +118,7 @@ for i in range(12):
 #     if n == rev:
 #         print(n,"is a palindrome string")
 #     else:
-#         print(n,"is not a palindrome string")      
+#         print(n,"is not a palindrome string")
 
 # palindrome("baab")
 
@@ -136,10 +133,10 @@ for i in range(12):
 #     if rev == org:
 #         print(org,"is a palindrome number")
 #     else:
-#         print(org,"is not a palindrome number") 
+#         print(org,"is not a palindrome number")
 # palindrome(323)
 
-# armstrong number 
+# armstrong number
 
 # def armstrong(n):
 #     s=0
@@ -162,7 +159,7 @@ for i in range(12):
 # string1 = str(sum)
 # for i in range(len(string)):
 #     string1 = string1+str(string[i])+str(list1[i])
-# print(string1)    
+# print(string1)
 
 # 2) find the sum of each string and find the biggest sum from the list
 # A=[222,121,145,611] find the largest sum if entire number ,
@@ -174,9 +171,9 @@ for i in range(12):
 #     string = list(map(int,str(i)))
 #     add = sum(string)
 #     new_arr.append(add)
-# print(max(new_arr),new_arr)    
+# print(max(new_arr),new_arr)
 
-#sort without using sort Keyword 
+# sort without using sort Keyword
 # list = [-5, -23, 5, 0, 23, -6, 23, 67]
 
 # for i in range(len(list)):
@@ -202,19 +199,20 @@ for i in range(12):
 #     left = sum-i
 #     if left in new_list:
 #         print(i,left)
-#   
+#
 #     new_list.append(i)
 
-# armstronge Number 
+# armstronge Number
+
 # loggic = 153 = 1^3+5^3+3^3 = 1 + 125+ 27 =153
 # 0 + 27 = 27 + 125
 # def arm(n):
 #     org= n
 #     sum=0
 #     while n >0:
-#         sum = sum + (n%10) *(n%10) *(n%10) 
+#         sum = sum + (n%10) *(n%10) *(n%10)
 #         n = n //10
-#     print(sum)    
+#     print(sum)
 #     if org == sum:
 #         print(f"{org} is a armstrong number")
 #     else:
@@ -225,13 +223,11 @@ for i in range(12):
 
 # 2124. Check if All A's Appears Before All B's
 
-#Input: s = "aaabbb"
+# Input: s = "aaabbb"
 # Output: true
 # Explanation:
 # The 'a's are at indices 0, 1, and 2, while the 'b's are at indices 3, 4, and 5.
 # Hence, every 'a' appears before every 'b' and we return true.
-
-
 
 
 # def check(s):
@@ -260,20 +256,22 @@ for i in range(12):
 # list3 = list(set(list1).intersection(list2))
 # print(list3)
 
-#Write a Python program to find the first non-repeating character in a string.
+# Write a Python program to find the first non-repeating character in a string.
 # string='stststopp'
 
-# def firstUniqChar(s):
-#     d={}
-#     for i in range(len(s)):
-#         if s[i] not in d:
-#             d[s[i]]=True
-#         else:
-#             d[s[i]]=False
-#     for i in range(len(s)):
-#         if d[s[i]] ==True:
-#             return s[i]
-#     return -1
+
+def firstUniqChar(s):
+    d = {}
+    for i in range(len(s)):
+        if s[i] not in d:
+            d[s[i]] = True
+        else:
+            d[s[i]] = False
+    for i in range(len(s)):
+        if d[s[i]] == True:
+            return s[i]
+    return -1
+
 
 # print(firstUniqChar(string))
 # from array import *
@@ -328,23 +326,22 @@ for i in range(12):
 # print(list(d.values()))
 
 
-
 # Remove adjacent duplicate characters from a string
 # Input:  AABBBACDDD
 # Output: ABACD
 
-# def removeDuplicates(s):
-#     pre= None
-#     l=[]
-#     for i in s:
-#         if i != pre:
-#             l.append(i)
-#             pre=i
-#     return "".join(l)
+
+def removeDuplicates(s):
+    pre = None
+    l = []
+    for i in s:
+        if i != pre:
+            l.append(i)
+        pre = i
+    return "".join(l)
 
 
-# print(removeDuplicates("AABBBACDDD"))
-
+# print(removeDuplicates("AAAAAABBBCCCAAA"))
 
 
 # Write a recursive program to reverse a given string.
@@ -359,24 +356,23 @@ for i in range(12):
 # print(reve("ia puhim"))
 
 
-
-#Is Subsequence - LeetCode
+# Is Subsequence - LeetCode
 
 
 # Input: s = "abc", t = "ahbgdc"
 # Output: true
 
-# def Subsequence(s,t):
-#     i ,j =0,0
-#     while i<len(s) and j < len(t):
-#         if t[j] == s[i]:
-#             i +=1
-#         j+=1
 
-#     return len(s) == i
+def Subsequence(s, t):
+    i, j = 0, 0
+    while i < len(s) and j < len(t):
+        if t[j] == s[i]:
+            i += 1
+        j += 1
+
+    return len(s) == i
 
 
-    
 # print(Subsequence('axc','acbgd'))
 
 
@@ -385,12 +381,913 @@ for i in range(12):
 # Output: "fl"
 
 
-# def longestCommonPrefix(strs):
-#     res=""
-#     for i in range(len(strs[0])):
-#         for s in strs:
-#             if i == len(s) or s[i] != strs[0][i]:
-#                 return res
-#         res+= strs[0][i] 
+def longestCommonPrefix(strs):
+    res = ""
+    for i in range(len(strs[0])):
+        for s in strs:
+            if i == len(s) or s[i] != strs[0][i]:
+                return res
+        res += strs[0][i]
+
 
 # print(longestCommonPrefix(["flower","flow","flight"]))
+
+# 20. Valid Parentheses
+# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+# An input string is valid if:
+
+# Open brackets must be closed by the same type of brackets.
+# Open brackets must be closed in the correct order.
+# Every close bracket has a corresponding open bracket of the same type
+
+# Example 1:
+
+# Input: s = "()"
+# Output: true
+# Example 2:
+
+# Input: s = "()[]{}"
+# Output: true
+
+
+def isValid(s):
+    openToClosed = {")": "(", "}": "{", "]": "["}
+    m = []
+
+    for ch in s:
+        if ch in openToClosed:
+            if m and m[-1] == openToClosed[ch]:
+                m.pop()
+            else:
+                return False
+        else:
+            m.append(ch)
+    return True if not m else False
+
+
+# print(isValid("[]"))
+
+# 242. Valid Anagram
+
+# Example 1:
+
+# Input: s = "anagram", t = "nagaram"
+# Output: true
+
+# Example 2:
+
+# Input: s = "rat", t = "car"
+# Output: false
+
+
+def isValid(s, t):
+
+    count_s, count_t = {}, {}
+
+    for i in range(len(s)):
+        count_s[s[i]] = count_s.get(s[i], 0) + 1
+        count_t[t[i]] = count_t.get(t[i], 0) + 1
+
+    for i in count_s:
+        if i not in count_t:
+            return False
+        else:
+            if count_t[i] != count_s[i]:
+                return False
+    return True
+
+
+s = "rat"
+t = "car"
+# print(isValid(t,s))
+
+
+# 347. Top K Frequent Elements
+# Input: nums = [1,1,1,2,2,3], k = 2
+# Output: [1,2]
+
+import heapq
+
+
+def topK(nums, k):
+    d = {}
+    for i in nums:
+        d[i] = d.get(i, 0) + 1
+
+    heap = [(v, k) for k, v in d.items()]
+    heapq.heapify(heap)
+    while len(heap) > k:
+        heapq.heappop(heap)
+    return list(v for (k, v) in heap)
+
+
+# print(topK([1,1,1,2,2,3], 2))
+
+
+#  Kth Smallest Element in an Array
+
+
+# Input: nums = [7, 10, 4, 3, 20, 15], k = 3
+# Output: 1
+
+
+def findKthSmallest(nums, k):
+
+    max_heap = []
+
+    for i in nums:
+        heapq.heappush(max_heap, -i)
+    while len(max_heap) > k:
+        heapq.heappop(max_heap)
+    return -max_heap[0]
+
+
+# print(findKthSmallest([7, 10, 4, 3, 20, 15], 3))
+
+
+def findKthHighest(nums, k):
+    min_heap = []
+    for i in nums:
+        heapq.heappush(min_heap, i)
+    # print(min_heap)
+    while len(min_heap) > k:
+        heapq.heappop(min_heap)
+    return min_heap[0]
+
+
+# print(findKthHighest([7, 10, 4, 3, 20, 15], 3))
+
+
+# 52. Maximum Product Subarray
+
+# Given an integer array nums, find a subarray that has the largest product, and return the product.
+
+# The test cases are generated so that the answer will fit in a 32-bit integer.
+
+
+# Example 1:
+
+# Input: nums = [2,3,-2,4]
+# Output: 6
+# Explanation: [2,3] has the largest product 6.
+
+
+def maxProd(nums):
+
+    max_prod = min_prod = result = nums[0]
+
+    for i in nums[1:]:
+        tem_max_prod = max(i, max_prod * i, min_prod * i)
+        tem_min_prod = min(i, max_prod * i, min_prod * i)
+
+        max_prod = tem_max_prod
+        min_prod = tem_min_prod
+
+        result = max(result, max_prod)
+
+    return result
+
+
+nums = [2, 3, -2, 4]
+# print(maxProd(nums))
+
+
+# 268. Missing Number
+
+# Input: nums = [3,0,1]
+# Output: 2
+
+
+# guess method
+def missingNumber(nums):
+    n = len(nums)
+    correct_sum = n * (n + 1) / 2
+    current_sum = sum(nums)
+
+    return correct_sum - current_sum
+
+
+# print(missingNumber([3,0,1]))
+
+
+# Find the index of first 1 in an infinite sorted array of 0s and 1s
+
+
+def find_first_occurrence(arr):
+    l, r = 0, 1
+
+    # expand the window unless right boundary exceeds 1
+    while arr[r] == 0:
+        l = r
+        r = 2 * r
+    # performed the binary search
+    while l <= r:
+        mid = l + (r - l) // 2
+        if arr[mid] == 1:
+            if mid == 0 or arr[mid - 1] == 0:
+                return mid
+            else:
+                r = mid - 1
+        else:
+            l = mid + 1
+
+    return -1
+
+
+arr = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+# print(find_first_occurrence(arr))
+# Write a code for Capitalize ( Refer the in put and output )
+
+# sample
+# input : getCodeType
+# output: Code_Type
+
+# i/p : getCodeStyle
+# o/p: Code_Style
+
+
+def camel_to_snake(s):
+    result = ""
+    removed_get = s.replace("get", "")
+    for ch in removed_get:
+        if ch.isupper():
+            result += "_" + ch
+        else:
+            result += ch
+
+    return result.lstrip("_")
+
+
+# print(camel_to_snake("getCodeStyle"))
+
+
+# Given an array of random integers, find the index of first non-repeating integer in the array.
+
+arr = [9, 4, 9, 6, 7, 4]
+
+
+def nri(arr):
+    d = {}
+    for i in arr:
+        d[i] = d.get(i, 0) + 1
+
+    for i in d:
+        if d[i] == 1:
+            return i
+
+
+# print(nri(arr))
+
+
+# Given tuple
+x = ([1, 2, 3], "str", 5)
+
+# Extract the list from the tuple
+list_inside_tuple = x[0]
+
+# Modify the list
+list_inside_tuple[0] = 100
+
+# Create a new tuple with the modified list
+modified_tuple = (list_inside_tuple, x[1], x[2])
+
+# print(modified_tuple)
+
+
+# 3. Write a code that prints the following pattern using list comprehension.
+
+#  Pattern = [1, 1, 1, 2, 4, 8, 3, 9, 27, 4, 16, 64]
+
+
+# for i in range(1,5):
+#     for j in range(1,4):
+#         print(i**j)
+
+
+# pattern_list = [ i**p for i in range(1,5) for p in range(1,4)]
+# print(pattern_list)
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# for i in matrix:
+#     for j in i:
+#         print(j)
+
+
+l = [j for i in matrix for j in i]
+
+# print(l)
+
+
+# from datetime import datetime
+
+# def decorator(fun):
+#     def wapper(a,b):
+#         t1 =  datetime.now()
+#         result =fun(a,b)
+#         t2 =  datetime.now()
+#         print(t2-t1)
+#         return result
+#     return wapper
+
+
+# @decorator
+# def dummy_fun(a,b):
+#     return(a/b)
+
+
+# print(dummy_fun(2,4))
+
+
+# from abc import ABC , abstractmethod
+# from typing import Any
+
+
+# class Intruments(ABC):
+#     def __init__(self,id):
+#         self.id = id
+
+#     @abstractmethod
+#     def verify(self):
+#         pass
+
+#     def display(self):
+#         print(self.id)
+
+
+# class ISIN(Intruments):
+
+
+#     def verify(self):
+#         print("verify method of isin class")
+
+
+# isin = ISIN(123)
+
+# isin.verify()
+
+
+# class Twitter:
+
+#     def __init__(self):
+#         self.follwer_dic = {}
+#         self.post_dic = {}
+#         self.news_feed =[]
+
+#     def follow(self, f1_id , f2_id):
+
+#         self.follwer_dic[f1_id] = f2_id
+
+
+#     def post(self,user_id,twitt_id):
+#         if user_id  in self.post_dic:
+#             self.post_dic[user_id].append(twitt_id)
+#         else:
+#             self.post_dic[user_id] = [twitt_id]
+
+#     def newsFeed(self,user_id):
+#         if user_id in self.post_dic:
+#             for k,v in self.post_dic.intems():
+#                 self.news_feed.append(v)
+
+#         return self.news_feed
+
+
+# Reversing the first K elements of a Queue
+
+
+def reverse_first_k(arr, k):
+    new_arr = []
+    for _ in range(k):
+        new_arr.append(arr.pop(0))
+    new_arr = new_arr[::-1]
+    new_arr = new_arr + arr
+    # print(new_arr)
+
+
+# reverse_first_k([10, 20, 30, 40, 50, 60, 70, 80, 90, 100],5)
+
+
+# Non-overlapping Intervals
+
+# Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+# Output: 1
+# Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
+
+
+def non_over_lapping(intervals):
+
+    prev = intervals[0]
+    intervals.sort(key=lambda x: x[0])
+    intervals.sort(key=lambda x: x[1])
+    result = 0
+    for i in range(1, len(intervals)):
+
+        if prev[1] > intervals[i][0]:
+            result += 1
+        else:
+            prev = intervals[i]
+
+    return result
+
+
+# print(non_over_lapping([[1,2],[2,3]]))
+
+
+def overlapping(arr):
+    pre = arr[0]
+    arr.sort(key=lambda x: x[0])
+    arr.sort(key=lambda x: x[1])
+    arr_new = [pre]
+    last_merge = arr_new[-1]
+    for i in range(1, len(arr)):
+        if pre[1] > arr[i][0]:
+            last_merge[1] = max(pre[1], arr[i][1])
+        else:
+            arr_new.append(arr[i])
+            pre = arr[i]
+    return arr_new
+
+
+arr = [[1, 3], [2, 6], [8, 10], [15, 18]]
+# print(overlapping(arr))
+# o/p:[[1,6],[8,10],[15,18]]
+
+
+# Given string print, a word with a maximum number of occurrences,
+
+
+def max_occurance(s):
+    words = s.split(" ")
+    d = {}
+
+    for word in words:
+        d[word] = d.get(word, 0) + 1
+
+    max_word = max(d, key=d.get)
+
+    return max_word
+
+
+# print(max_occurance("hello world hello world hello python world"))
+
+
+# input: [1,2,3,4,5,6] and output: [[1,2], [3,4], [5,6]] how can you get the output with the help of a list expression?
+
+l = [1, 2, 3, 4, 5, 6]
+new_list = [l[i : i + 2] for i in range(0, len(l), 2)]
+# print(new_list)
+
+
+# Write a program (pseudocode) to find out the number of vowels in a string
+
+
+def count_vowels(s):
+    vowels = "AaEeIiOoUu"
+    new_str = ""
+    d = {}
+    for i in s:
+        if i in vowels:
+            new_str += i
+    for i in new_str:
+        d[i] = d.get(i, 0) + 1
+
+    return d
+
+
+# print(count_vowels("Geeks for Geeks"))
+
+
+# Find out the minimum number in a function without using any compare or max/min operator
+
+
+def min_max(arr):
+    max_number = min_number = arr[0]
+    for i in arr[1::]:
+        if i < min_number:
+            min_number = i
+        else:
+            if i > max_number:
+                max_number = i
+    # print(max_number, min_number)
+
+
+arr = [2, 0, 2, 7, 5, -1, -2]
+
+# min_max(arr)
+
+# Convert a string to a list without a list() or list expression
+
+
+str_e = "Geeks for Geeks"
+str_e = str_e.split(" ")
+# print(str_e)
+
+
+# 32. Longest Valid Parentheses
+
+
+# Input: s = "(()"
+# Output: 2
+# Explanation: The longest valid parentheses substring is "()"
+
+
+def longestValidParentheses(s):
+    r, l = 0, 0
+    result = 0
+    for i in range(len(s)):
+        if s[i] == "(":
+            r += 1
+        else:
+            l += 1
+        if r == l:
+            result = max(result, r + l)
+        elif l > r:
+            r, l = 0, 0
+    r, l = 0, 0
+    for i in range(len(s) - 1, -1, -1):
+        if s[i] == "(":
+            r += 1
+        else:
+            l += 1
+        if r == l:
+            result = max(result, r + l)
+        elif r > l:
+            r, l = 0, 0
+    return result
+
+
+# print(longestValidParentheses(""))
+
+
+# 238. Product of Array Except Self
+
+
+# Input: nums = [1,2,3,4]
+# Output: [24,12,8,6]
+
+
+def productExceptSelf(arr):
+
+    # l = [1,1,2,6] & r = [1,4,12,24]
+    r, l = [1], [1]
+    for i in range(len(arr) - 1):
+        r.append(r[-1] * arr[i])
+
+    for i in range(len(arr) - 1, 0, -1):
+        l.append(l[-1] * arr[i])
+    l = l[::-1]
+    for i in range(len(arr)):
+        l[i] = l[i] * r[i]
+    return l
+
+
+# print(productExceptSelf([1,2,3,4]))
+
+
+# Example usage
+s1 = "i have this book i like to read"
+s2 = "she has this book i like to watch"
+
+# longest common substring
+
+
+def lcs(s1, s2):
+
+    # Create a 2D array to store lengths of longest common suffixes
+    m, n = len(s1), len(s2)
+
+    lcs = [[0] * (n + 1) for _ in range(m + 1)]
+    # To store the length of the longest common substring
+    length_longest_string = 0
+    # To store the ending index of the longest common substring in s1
+    end_index_s1 = 0
+
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i - 1] == s2[j - 1]:
+                lcs[i][j] = lcs[i - 1][j - 1] + 1
+                if lcs[i][j] > length_longest_string:
+                    length_longest_string = lcs[i][j]
+                    end_index_s1 = i - 1
+            else:
+                lcs[i][j] = 0
+    # Extract the longest common substring
+    start_index_s1 = end_index_s1 - length_longest_string + 1
+    longest_sub_string = s1[start_index_s1 : end_index_s1 + 1]
+    return longest_sub_string, length_longest_string
+
+
+# print(lcs(s1,s2))
+
+
+# 1143. Longest Common Subsequence
+# Input: text1 = "abcde", text2 = "ace"
+# Output: 3
+def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+    m, n = len(text1), len(text2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+
+    for i in range(m - 1, -1, -1):
+        for j in range(n - 1, -1, -1):
+            if text1[i] == text2[j]:
+                dp[i][j] = 1 + dp[i + 1][j + 1]
+            else:
+                dp[i][j] = max(dp[i][j + 1], dp[i + 1][j])
+    return dp[0][0]
+
+
+# 53. Maximum Subarray
+
+
+# Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+# Output: 6
+# Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+
+
+def max_sub_arr(nums):
+    maxSub = nums[0]
+    count = 0
+    for i in nums:
+        if count < 0:
+            count = 0
+        count += i
+        maxSub = max(maxSub, count)
+    return maxSub
+
+
+# print(max_sub_arr([-2,1,-3,4,-1,2,1,-5,4]))
+
+
+A = "aaxyz aaayzp xyzp xyza"
+# opt = "xyzp xyza aaxyz aaayzp"
+
+split_A = A.split(" ")
+output = sorted(split_A, key=lambda x: x.count("a"))
+# print(" ".join(output))
+
+
+# d= {x.count('a'):x for x in split_A}
+# out_put = dict(sorted(d.items(),key=lambda x : x[0]))
+# print(out_put)
+
+
+arr = [1, 4, 5, 6, 7, 8, 9, 10]
+k = 3
+# out = [10, 15, 18, 21, 24, 27]
+
+
+def sumOfElement(arr, k):
+    new_arr = []
+    for i in range(len(arr) - k + 1):
+        s = 0
+        for j in range(i, i + k):
+            s += arr[j]
+        new_arr.append(s)
+    print(new_arr)
+
+
+# sumOfElement(arr,k)
+
+
+# Segregate an array containing 0 and 1 with minimum number of swaps.
+
+
+def swap(arr):
+    l = 0
+    r = len(arr) - 1
+    swap = 0
+    while l < r:
+        while l < r and arr[l] == 0:
+            l += 1
+        while l < r and arr[r] == 1:
+            r -= 1
+        if l < r:
+            arr[l], arr[r] = arr[r], arr[l]
+            l += 1
+            r -= 1
+            swap += 1
+
+    return swap
+
+
+arr = [0, 0, 1, 0, 0]
+# swaps = swap(arr)
+
+# print(f"Array after segregation: {arr}")
+# print(f"Number of swaps: {swaps}")
+
+
+# Search a 2D Matrix
+
+# Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+# Output: true
+
+
+def searchMatrix(maxtix, target):
+    row, col = len(matrix), len(matrix[0])
+    top, bottom = 0, row - 1
+    while top <= bottom:
+        row = (top + bottom) // 2
+        if target > matrix[row][-1]:
+            top = row + 1
+        elif target < matrix[row][0]:
+            bottom = row - 1
+        else:
+            break
+
+    if not top <= bottom:
+        return False
+    l, r = 0, col - 1
+    row = (top + bottom) // 2
+    while l <= r:
+        mid = (r + l) // 2
+        if target > matrix[row][mid]:
+            l = mid + 1
+        elif target < matrix[row][mid]:
+            r = mid - 1
+        else:
+            return True
+    return False
+
+
+matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
+
+target = 16
+
+# print(searchMatrix(matrix,target))
+
+
+# Policemen catch thieves
+# Given an array of size n that has the following specifications:
+
+# Each element in the array contains either a policeman or a thief.
+# Each policeman can catch only one thief.
+# A policeman cannot catch a thief who is more than K units away from the policeman.
+# We need to find the maximum number of thieves that can be caught.
+# Examples: ['P', 'T', 'T', 'P', 'T'], k = 1.
+
+
+def MaxThief(arr, k):
+    thief = []
+    police = []
+    policeIndex = 0
+    thiefIndex = 0
+    ans = 0
+    for i in range(len(arr)):
+        if arr[i] == "P":
+            police.append(i)
+        if arr[i] == "T":
+            thief.append(i)
+
+    while policeIndex < len(police) and thiefIndex < len(thief):
+        if abs(police[policeIndex] - thief[thiefIndex] <= k):
+            policeIndex += 1
+            thiefIndex += 1
+            ans += 1
+
+        elif police[policeIndex] < thief[thiefIndex]:
+            policeIndex += 1
+        else:
+            thiefIndex += 1
+
+    return ans
+
+
+# print(MaxThief(["T", "T", "P", "P", "T", "P"], 2))
+
+
+# 33. Search in Rotated Sorted Array
+# Input: nums = [4,5,6,7,0,1,2], target = 0
+# Output: 4
+
+
+def search(nums, target):
+
+    l, h = 0, len(nums) - 1
+
+    while l <= h:
+        mid = (l + h) // 2
+
+        if nums[mid] == target:
+            return mid
+
+        if nums[l] < nums[mid]:
+            # mid is in left side on sorted array
+            if target >= nums[l] and target < nums[mid]:
+                h = mid - 1
+
+            else:
+                l = mid + 1
+
+        else:
+            # mid is in right side of the sorted array
+            if target > nums[mid] and target <= nums[h]:
+                l = mid + 1
+            else:
+                h = mid - 1
+
+    return -1
+
+
+# print(search([4, 5, 6, 7, 0, 1, 2], 0))
+
+
+#  Write a Python program to find the number of notes
+# (Samples of notes: 10, 20, 50, 100, 200, 500) against an amount.
+
+# Input: Amount
+
+# Output: No of notes
+
+# Example:
+
+# Input: 880
+
+# Output: 6 (As we need 500 Rs note + 200 Rs note + 100 Rs note + 50 Rs note + 20 Rs note + 10 Rs note)
+
+# Input: 1000
+
+# Output: 2 (As we need two 500 Rs notes)
+
+
+# amount = 880
+# note_list = [10, 20, 50, 100, 200, 500]
+
+# def note(amout,note_list):
+#     note_list=sorted(note_list,reverse = True)
+#     count = 0
+#     remaining_amout = amout
+#     for note in note_list:
+#         if note <= amout:
+#             remaining_amout = remaining_amout- note
+#             count+=1
+#         if remaining_amout in note_list:
+#             count+=1
+#             return count
+
+# print(note(amount,note_list))
+
+
+# key : city
+# value : state
+
+# Input = {'Ahmedabad': 'Gujarat', 'Mumbai':'Maharashtra', 'Pune':'Maharashtra',
+#          'Mohali':'Punjab', 'Vadodara':'Gujarat', 'Banglore':'Karnataka'}
+
+# Output = {'Gujarat': ['Ahmedabad', 'Vadodara'], 'Maharashtra': ['Mumbai', 'Pune'], 'Punjab': ['Mohali'], 'Karnataka': ['Banglore']}
+
+# new={}
+# for k,v in Input.items():
+#     if v not in new:
+#         new[v]=[k]
+#     else:
+#         new[v].append(k)
+
+# print(new)
+
+
+# Coin Change
+
+# Example 1:
+
+# Input: coins = [1,2,5], amount = 11
+# Output: 3
+# Explanation: 11 = 5 + 5 + 1
+
+
+def coin(coins, amount):
+
+    dp = [amount + 1 for _ in range((amount + 1))]
+
+    dp[0] = 0
+
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] = min(dp[i], 1 + dp[i - coin])
+
+    return dp[amount] if dp[amount] != amount + 1 else -1
+
+
+# print(coin([2], 3))
+
+
+def longestConsecutive(nums):
+    # removed dublicate
+    setNums = set(nums)
+    longest = 0
+
+    # to find the sequence have to find element that -1 should not be there (smallest)
+
+    for n in nums:
+        if (n - 1) not in setNums:
+            # now create a loop to check all consecutive number but adding +1 untill its there in the list
+            length = 1
+            while (n + length) in setNums:
+                length += 1
+            longest = max(longest, length)
+
+    return length
+
+# print(longestConsecutive([100, 4, 200, 1, 3, 2]))

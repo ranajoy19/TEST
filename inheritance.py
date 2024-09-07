@@ -113,24 +113,48 @@
 # object2.func3()
 
 
-class parent:
+# class parent:
+#     def __init__(self,parent_name):
+#         self.parent_name = parent_name
+
+#     def show_parent_name(self):
+#         print(f"parent name is {self.parent_name}")
+
+#     def show(self):
+#         print("hello world")    
+
+# class child(parent):
+#     def __init__(self,child_name ,parent_name):
+#         self.child_name = child_name
+#         parent.__init__(self,parent_name)
+
+#     def show_name(self):
+#         print(f"parent is {self.parent_name} and child is {self.child_name}")
+
+
+# Child = child("rob","job")
+# Child.show_parent_name()
+
+
+class Parent:
+
     def __init__(self,parent_name):
         self.parent_name = parent_name
 
-    def show_parent_name(self):
-        print(f"parent name is {self.parent_name}")
+    def display(self):
+        print(self.parent_name)
 
-    def show(self):
-        print("hello world")    
-
-class child(parent):
-    def __init__(self,child_name ,parent_name):
+    
+class Child(Parent):
+    def __init__(self, parent_name,child_name):
         self.child_name = child_name
-        parent.__init__(self,parent_name)
+        Parent.__init__(self,parent_name)
 
-    def show_name(self):
-        print(f"parent is {self.parent_name} and child is {self.child_name}")
+    def display(self):
+        Parent.display(self)
+        print(self.child_name)
 
 
-Child = child("rob","job")
-Child.show_parent_name()
+child =Child("raja","chompa")
+
+child.display()

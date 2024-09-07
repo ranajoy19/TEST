@@ -1,19 +1,30 @@
 # # Online Python compiler (interpreter) to run Python online.
 # # Write Python 3 code in this online editor and run it.
 
-# l = [
-#     ['Sam', 'Emma', 'Joan', 'Krish', 'John', 'Desmond', 'Tom', 'Nicole' ],
-#     ['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'],
-#     ['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'],
-#     ['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'],
-#     ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'],
-#     ['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']
-#     ]
+l = [
+    ['Sam', 'Emma', 'Joan', 'Krish', 'John', 'Desmond', 'Tom', 'Nicole' ],
+    ['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'],
+    ['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'],
+    ['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'],
+    ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'],
+    ['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']
+    ]
 
 # # List of participants who participated daily
-    
-# # res1=list(set.intersection(*map(set,l)))
-# # print(res1)
+
+#method-1    
+# res1=set.intersection(*map(set,l))
+# print(res1)
+
+#method-2
+# first = set(l[0])
+
+# for sublist in l[1::]:
+#     first.intersection_update(sublist)
+
+# print(list(first))
+
+
 
 # class code:
 #     def __init__(self,l):

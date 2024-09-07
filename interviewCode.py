@@ -149,7 +149,7 @@
 # Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 # Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
-
+# 1st method
 # def stock(prices):
 #     l=0
 #     r=1
@@ -163,8 +163,21 @@
 #         r+=1
 #     return max_profit
 #
-#
-# prices= [7,1,5,3,6,4]
+
+# 2nd method
+
+
+def stock(prices):
+    ans = 0
+    sm = float("inf")
+    for i in prices:
+        ans = max(ans, i - sm)
+        sm = min(sm, i)
+    return ans
+
+
+# #
+prices = [7, 1, 5, 3, 6, 4]
 #
 # result=stock(prices)
 # print(result)
@@ -265,13 +278,13 @@
 #
 # print(min_coin(coins, amount))
 
-#53. Maximum Subarray
+# 53. Maximum Subarray
 # Given an integer array nums, find the contiguous subarray
 # (containing at least one number) which has the largest sum and return its sum
 # A subarray is a contiguous part of an array.
 #
 # Example
-#1)
+# 1)
 # Input: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 # Output: 6
 # Explanation: [4, -1, 2, 1]
@@ -290,8 +303,7 @@
 # print(maxSubArray(nums))
 
 
-
-#238. Product of Array Except Self
+# 238. Product of Array Except Self
 # Input: nums = [1,2,3,4]
 # Output: [24,12,8,6]
 
@@ -300,10 +312,10 @@
 #     for n in range(len(nums)-1,0,-1):
 #         output.append(output[-1]*nums[n])
 #     output = output[::-1]
-#     left =1 
+#     left =1
 #     for n in range(len(nums)):
 #         output[n] = output[n]* left
-#         left *= nums[n] 
+#         left *= nums[n]
 #     return output
 
 # 34. Find First and Last Position of Element in Sorted Array
@@ -319,8 +331,8 @@
 #         left =self.findleftbound(nums,target)
 #         right =self.findrightbound(nums,target)
 #         return [left,right]
-    
-    
+
+
 #     def findleftbound(self, nums:List[int], target: int):
 #         l,r = 0,len(nums)-1
 #         index =-1
@@ -336,7 +348,7 @@
 #             else:
 #                 r = mid-1
 #         return index
-    
+
 #     def findrightbound(self, nums:List[int], target: int):
 #             l,r = 0,len(nums)-1
 #             index =-1
@@ -366,7 +378,7 @@
 # min_num = nums[0]
 # for i in nums:
 #     min_num = min(min_num,i)
-# print(min_num)    
+# print(min_num)
 
 # def search(nums,target):
 #     # print(len(nums))
@@ -379,9 +391,9 @@
 #             return i
 #         else:
 #             return -1
-        
+
 # nums = [4,5,6,7,0,1,2]
-# target = 1      
+# target = 1
 
 # print(search(nums,target))
 
@@ -413,3 +425,12 @@
 
 # height = [1,8,6,2,5,4,8,3,7]
 # %%
+
+
+# 128. Longest Consecutive Sequence
+
+# Input: nums = [100,4,200,1,3,2]
+# Output: 4
+
+
+

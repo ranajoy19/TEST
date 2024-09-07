@@ -6,18 +6,22 @@
 
 #2) Inheritance
 
-#
-# class A:
-#     def display(self):
-#         print("its display")
-#
-# class B(A):
-#     def show(self):
-#         print("its show")
-#
-#
-# b= B()
-#
+# 
+class A:
+    def __init__(self,name):
+        self.name = name
+    def display(self):
+        print("its display")
+
+class B(A):
+    def __init__(self, name):
+        A.__init__(self,name)
+    def show(self):
+        print("its show",self.name)
+
+
+# b= B("raja")
+
 # b.show()
 # b.display()
 
@@ -138,7 +142,7 @@
 #  . pyc file contains the bytecode of your program.
 
 # Ways to concatenate 2 tuples
-# one = [1,2,3) 
+# one = (1,2,3) 
 # two = (1,2,3)
 # print(id(two))
 # two = one+two
@@ -150,20 +154,20 @@
 # => _a is protected __a is private key word
 
 
-# class A:
-#     a=1.5
-#     _a =2
-#     __a = 3
-#     def show(self):
-#         print(A.a)
+class A:
+    a=1.5
+    _a =2
+    __a = 3
+    def show(self):
+        print(A.a)
     
-# class B(A):
-#     def show1(self):
-#         print(A._a)
+class B(A):
+    def show1(self):
+        print(A._a)
 
 # a=A()
-# print(a._A__a)
-#  a.show()
+# # print(a._A__a)
+# a.show()
 # b= B()
 # b.show1()
 # # c= C()

@@ -1,6 +1,6 @@
-#Fibonacci series
+# Fibonacci series
 
-'''def Fibonacci(n):
+"""def Fibonacci(n):
     a=0
     b=1
     if n==1 or n==2:
@@ -21,7 +21,7 @@
 for n in range(1,11):
     print(n ,":" ,Fibonacci(n))
 
-'''
+"""
 
 # second largest element in the list
 #
@@ -54,7 +54,7 @@ for n in range(1,11):
 #     print(i)
 
 # finding missing number in the array (submission method and Xor Operation)
-#1)
+# 1)
 # array=[1,2,4,5,6,7]
 # n= len(array)
 # total_sum= (n+1)*(n+2)/2
@@ -63,16 +63,16 @@ for n in range(1,11):
 
 # Find Out Pairs with given sum in an array in python of time complexity O(n log n)
 #
-arr=[8,7,2,5,3,1]
-sum=10
+arr = [8, 7, 2, 5, 3, 1]
+sum = 10
 
-l=[]
+l = []
 
 for i in range(len(arr)):
-    left=sum-arr[i]
+    left = sum - arr[i]
     if left in l:
-        print(arr[i],left)
-    l.append(arr[i]) #[5,7,4,3,9,8]
+        pass
+    l.append(arr[i])  # [5,7,4,3,9,8]
     # print(l)
 #
 # Find minimum difference between two elements of Binary Tree
@@ -90,7 +90,7 @@ for i in range(len(arr)):
 
 # Find maximum difference between two elements of Binary Tree
 
-#arr=[ 5,32 ,45,4,12,18,25]
+# arr=[ 5,32 ,45,4,12,18,25]
 
 
 # arr.sort()
@@ -103,7 +103,7 @@ for i in range(len(arr)):
 # print(max_diff)
 
 
-#finding the non repeating number
+# finding the non repeating number
 # from collections import Counter
 #
 # #nums=input()
@@ -114,7 +114,7 @@ for i in range(len(arr)):
 #     if (frequency[i]==1):
 #         print(i)
 
-#find duplicate number from the list
+# find duplicate number from the list
 
 # nums = [1,3,4,2,2]
 #
@@ -129,7 +129,7 @@ for i in range(len(arr)):
 # x=lambda a: a*a
 # print(x(3))
 
-#list
+# list
 # list=['rana',9,'mona','sonu']
 #
 # #list[3]='raja'
@@ -138,7 +138,7 @@ for i in range(len(arr)):
 # print(list)
 
 
-#Even Pairs
+# Even Pairs
 
 # def even_pairs(A):
 #     n=len(A)
@@ -196,13 +196,13 @@ for i in range(len(arr)):
 #
 
 
-#list comprehensive
+# list comprehensive
 
 # sqaure =[i**2 for i in range(1,101)]
 # print(sqaure)
 
 
-#Subarray with given sum
+# Subarray with given sum
 # Input:
 # N = 5, S = 12
 # A[] = {1,2,3,7,5}
@@ -233,7 +233,6 @@ for i in range(len(arr)):
 # print(x(2,3,4))
 
 
-
 # from datetime import date
 
 # from datetime import timedelta
@@ -241,3 +240,37 @@ for i in range(len(arr)):
 # print(Begindatestring)
 # real = Begindatestring+ timedelta(days=365)
 # print(real)
+
+
+import time, unittest
+
+
+def decorator(fun):
+    def wrapper(*agrs, **kwargs):
+        t1 = time.time()
+        result = fun(*agrs, **kwargs)
+        t2 = time.time()
+        return (result, t2 - t1)
+
+    return wrapper
+
+
+@decorator
+def dummy_fun():
+    time.sleep(2)
+    return "done"
+
+
+# print(dummy_fun())
+
+
+class DecoratorUnitTest(unittest.TestCase):
+    def test(self):
+
+        result, time = dummy_fun()
+
+        self.assertAlmostEqual(time, 2, delta=0.05)
+
+
+if __name__ == "__main__":
+    unittest.main()

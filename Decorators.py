@@ -210,7 +210,33 @@
         
 #     print("decorator_func is working")
 #     return wrapper()
+
+
 # @decorator_func
 # def original_func(a,b):
 #     return 'this is my original function',a+b
 
+
+
+import time
+def local_cache(fun):
+    cache = {}
+    def wapper(*agrs):
+        if agrs not in cache:
+            cache[agrs] = fun(*agrs)
+        return cache[agrs]
+    return wapper
+        
+@local_cache    
+def febo(n):
+    if n== 0 :
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return(febo(n-1)+febo(n-2))
+t1 = time.time()
+for i in range(1,33):
+    print(febo(i))
+t2 = time.time()
+print("end of operation",t2-t1)

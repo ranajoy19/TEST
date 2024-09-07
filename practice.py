@@ -258,5 +258,17 @@
 
 
 
+Input =[-5, -4, -3, -1, 0, 2, 3, 4, 5]
 
 
+def sort_fun(arr):
+    new_arr = []
+    while arr:
+        max_value=arr[0]
+        for i in arr:
+            if i > max_value:
+                max_value = i
+        new_arr.append(max_value)
+        arr.remove(max_value)
+    print(new_arr)
+sort_fun(Input)
